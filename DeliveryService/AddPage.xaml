@@ -1,0 +1,33 @@
+﻿<Page x:Class="DeliveryService.AddPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliveryService"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="White"
+      Title="AddPage">
+
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="Back" Content="Назад" Grid.Column="0" Margin="10" Width="100" HorizontalAlignment="Left" Click="Back_Click"/>
+
+        <StackPanel Grid.Row="1"  Orientation="Vertical" Margin="10">
+            <Label Content="Вес" HorizontalAlignment="Center"/>
+            <TextBox x:Name="WeightOrder" IsEnabled="True" Text="4,57" HorizontalContentAlignment="Center"/>
+            <Label Content="ID района" HorizontalAlignment="Center"/>
+            <TextBox x:Name="IdOrderArea" IsEnabled="True" Text="51428b23fc2b4435b78d0b5b23fa17c2" HorizontalContentAlignment="Center"/>
+            <Label Content="Имя района" HorizontalAlignment="Center"/>
+            <TextBox x:Name="NameOrderArea" IsEnabled="True" Text="Тверской" HorizontalContentAlignment="Center"/>
+            <Label Content="Время доставки заказа" HorizontalAlignment="Center"/>
+            <DatePickerTextBox x:Name="OrderDeliveryTime"  IsEnabled="True" HorizontalContentAlignment="Center" Text="2024-10-25 00:13:11"/>
+            <Button x:Name="Add" Content="Добавить" Margin="10" Click="Add_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Page>
