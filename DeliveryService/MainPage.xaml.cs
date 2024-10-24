@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -89,6 +90,7 @@ namespace DeliveryService
                     await writer.WriteLineAsync(order.GetSaveFormat());
                 }
             }
+            Process.Start(Directory.GetCurrentDirectory());
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
